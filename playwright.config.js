@@ -1,4 +1,3 @@
-// playwright.config.js
 module.exports = {
   timeout: 30000,
   use: {
