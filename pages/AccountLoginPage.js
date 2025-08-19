@@ -1,20 +1,16 @@
-const BasePage = require('../core/BasePage');
-const PageGeneratorManager = require('../core/PageGeneratorManager');
-const AccountDashboardPage = require('./AccountDashboardPage');
+const BasePage = require("../core/BasePage");
+const PageGeneratorManager = require("../core/page-generator-manager");
+const AccountDashboardPage = require("./AccountDashboardPage");
 
 class AccountLoginPage extends BasePage {
   constructor(page) {
     super(page);
-    this.continueButton = page.getByRole('button', { name: 'Continue' });
-    this.loginNameTextbox = page.getByRole('textbox', { name: 'Login Name' });
-    this.passwordTextbox = page.getByRole('textbox', { name: 'Password' });
-    this.forgotYourPasswordLink = page.getByRole('link', {
-      name: 'Forgot your password?',
-    });
-    this.forgotYourLoginLink = page.getByRole('link', {
-      name: 'Forgot your login?',
-    });
-    this.loginButton = page.getByRole('button', { name: 'Login' });
+    this.continueButton = this.page.getByRole("button", { name: "Continue" });
+    this.loginNameTextbox = this.page.locator("#loginFrm_loginname");
+    this.passwordTextbox = this.page.locator("#loginFrm_password");
+    this.forgotYourPasswordLink = this.page.getByRole("link", { name: "Forgot your password?" });
+    this.forgotYourLoginLink = this.page.getByRole("link", { name: "Forgot your login?"});
+    this.loginButton = this.page.getByRole("button", { name: "Login" });
   }
 
   async clickcontinueButton() {
@@ -38,11 +34,7 @@ class AccountLoginPage extends BasePage {
   }
 
   async clickLoginButton() {
-    await Promise.all([
-      this.page.getByRole('heading', { name: 'My Account' }).waitFor(),
-      this.clickElement(this.loginButton)
-    ]);
-    return PageGeneratorManager.getAccountDashboardPage(this.page);
+    await this.clickElement(this.loginButton);
   }
 
   async login(loginName, password) {

@@ -1,0 +1,35 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="22.208623">
+<testsuite name="login.spec.js" timestamp="2025-08-18T15:28:49.547Z" hostname="Chromium" tests="1" failures="0" skipped="0" time="13.306" errors="0">
+<testcase name="login with empty or invalid credentials" classname="login.spec.js" time="13.306">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/login-login-with-empty-or-invalid-credentials-Chromium/test-finished-1.png]]
+
+[[ATTACHMENT|../../test-results/login-login-with-empty-or-invalid-credentials-Chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="login.spec.js" timestamp="2025-08-18T15:28:49.547Z" hostname="Firefox" tests="1" failures="0" skipped="0" time="15.985" errors="0">
+<testcase name="login with empty or invalid credentials" classname="login.spec.js" time="15.985">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/login-login-with-empty-or-invalid-credentials-Firefox/test-finished-1.png]]
+
+[[ATTACHMENT|../../test-results/login-login-with-empty-or-invalid-credentials-Firefox/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="login.spec.js" timestamp="2025-08-18T15:28:49.547Z" hostname="WebKit" tests="1" failures="0" skipped="0" time="10.167" errors="0">
+<testcase name="login with empty or invalid credentials" classname="login.spec.js" time="10.167">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/login-login-with-empty-or-invalid-credentials-WebKit/test-finished-1.png]]
+
+[[ATTACHMENT|../../test-results/login-login-with-empty-or-invalid-credentials-WebKit/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

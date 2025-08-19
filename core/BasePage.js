@@ -8,16 +8,12 @@ class BasePage {
   constructor(page) {
     /** @type {Page} */
     this.page = page;
-    this.loginOrRegisterLink = page.getByRole('link', { name: 'Login or register' });
-    this.searchBar = page.locator('input[placeholder="Search Keywords"]');
-    this.currencyDropdown = page.locator('.dropdown-menu.currency');
-    this.minicart = page.locator('.hover>a[href*="cart"]');
-    this.dynamicMenuItemByLabel = (label) => page.locator(`li[data-id='menu_${label.toLowerCase()}']`);
-  
+    this.loginOrRegisterLink = page.getByRole("link", { name: "Login or register" });
+    this.errorMessage = page.locator(".alert-error");
   }
 
-  async navigateToUrl(url) {
-    await this.page.goto(url, { waitUntil: 'networkidle' });
+  async navigateToUrl(url, locator) {
+    await this.page.goto(url);
   }
 
   async getPageTitle() {
@@ -25,67 +21,71 @@ class BasePage {
   }
 
   async refreshPage() {
-    await this.page.reload({ waitUntil: 'networkidle' });
+    await this.page.reload({ waitUntil: "networkidle" });
   }
 
   async setcookie(name, value) {
-    await this.page.context().addCookies([{ name, value, url: this.page.url() }]);
+    await this.page
+      .context()
+      .addCookies([{ name, value, url: this.page.url() }]);
   }
 
   async getCookie(name) {
     const cookies = await this.page.context().cookies();
-    const cookie = cookies.find(cookie => cookie.name === name);
+    const cookie = cookies.find((cookie) => cookie.name === name);
     return cookie ? cookie.value : null;
   }
 
   async clickElement(locator) {
-    await this.page.click(locator, { force: true });
+    await locator.scrollIntoViewIfNeeded();
+    await locator.waitFor({ state: "visible" });
+    await locator.click({ force: true });
   }
 
   async fillTextbox(locator, text) {
-    await this.clearInput(locator);
-    await this.page.fill(locator, text);
-  }
-
-  async clearInput(locator) {
-    await this.page.fill(locator, '', { force: true });
+    await locator.waitFor({ state: "visible" });
+    await locator.fill(text);
   }
 
   async selectCheckbox(locator, checked = true) {
-    const isChecked = await this.page.isChecked(locator);
+    const isChecked = await locator.isChecked();
     if (isChecked !== checked) {
-      await this.page.check(locator, { force: true });
+      if (checked) {
+        await locator.check({ force: true });
+      } else {
+        await locator.uncheck({ force: true });
+      }
     }
   }
 
   async unselectCheckbox(locator) {
-    const isChecked = await this.page.isChecked(locator);
+    const isChecked = await locator.isChecked();
     if (isChecked) {
-      await this.page.uncheck(locator, { force: true });
+      await locator.uncheck({ force: true });
     }
-  } 
+  }
 
   async selectRadioButton(locator) {
-    const isChecked = await this.page.isChecked(locator);
+    const isChecked = await locator.isChecked();
     if (!isChecked) {
-      await this.page.check(locator, { force: true });
+      await locator.check({ force: true });
     }
   }
 
   async getText(locator) {
-    return await this.page.textContent(locator);
+    return await locator.textContent();
   }
 
   async getElementAttribute(locator, attribute) {
-    return await this.page.getAttribute(locator, attribute);
+    return await locator.getAttribute(attribute);
   }
 
   async hover(locator) {
-    await this.page.hover(locator, { force: true });
+    await locator.hover();
   }
 
   async selectOptionDropdown(locator, value) {
-    await this.page.selectOption(locator, value);
+    await locator.selectOption(value);
   }
 
   async switchToTab(index) {
@@ -110,16 +110,15 @@ class BasePage {
   }
 
   async getNumberOfElements(locator) {
-    return await this.page.locator(locator).count();
+    return await locator.count();
   }
 
-  async searchWithValue(value) {
-    await this.fillTextbox(this.searchBar, value);
-    await this.page.keyboard.press('Enter');
+  async clickLoginOrRegisterLink() {
+    await this.clickElement(this.loginOrRegisterLink);
   }
 
-  async clickMenuItemByLabel(label) {
-    await this.dynamicMenuItemByLabel(label).click();
+  async getErrorMessage() {
+    return this.errorMessage;
   }
 }
 

@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "regression": "playwright test --grep @regression"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.54.2"
+    "@faker-js/faker": "^9.9.0",
+    "@playwright/test": "^1.54.2",
+    "allure-playwright": "^3.3.3"
   }
 }
