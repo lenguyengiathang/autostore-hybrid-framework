@@ -1,7 +1,8 @@
+require("dotenv").config();
 const { expect } = require("@playwright/test");
 
 module.exports = {
-  globalSetup: require.resolve("./fixtures/global-setup.js"),
+  globalSetup: undefined,
   globalTeardown: undefined,
   testDir: "tests",
   timeout: 30 * 1000,
@@ -10,12 +11,12 @@ module.exports = {
   },
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 2 : undefined,
+  retries: process.env.CI ? 1 : 0,
+  workers: process.env.CI ? 1 : undefined,
   reporter: [
     ["list"],
-    ['junit', { outputFile: 'reports/junit/results.xml' }],
-    ['html',  { outputFolder: 'playwright-report', open: 'never' }],
+    ["junit", { outputFile: "reports/junit/results.xml" }],
+    ["html", { outputFolder: "playwright-report", open: "never" }],
     ["json", { outputFile: "results.json" }],
   ],
   use: {
@@ -27,8 +28,8 @@ module.exports = {
       mode: "on",
       fullPage: true,
     },
-    storageState: "storageState.json",
     baseURL: process.env.BASE_URL || "https://automationteststore.com/",
+    storageState: "storageState.json",
     launchOptions: {
       args: ["--start-maximized"],
     },

@@ -1,5 +1,5 @@
 const BasePage = require('../core/BasePage');
-const PageGeneratorManager = require('../core/page-generator-manager');
+const SearchResultsPage = require('./SearchResultsPage');
 
 class HomePage extends BasePage {
   constructor(page) {
@@ -14,11 +14,10 @@ class HomePage extends BasePage {
     await this.navigateToUrl("/");
   }
 
-    /** @returns {import('./SearchResultsPage')} */
   async searchWithValue(value) {
     await this.fillTextbox(this.searchBar, value);
     await this.page.keyboard.press("Enter");
-    return PageGeneratorManager.getSearchResultsPage(this.page);
+    return new SearchResultsPage(this.page);
   }
 
   async clickMenuItemByLabel(label) {

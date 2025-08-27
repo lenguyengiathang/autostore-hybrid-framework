@@ -1,5 +1,4 @@
 const BasePage = require("../core/BasePage");
-const PageGeneratorManager = require("../core/page-generator-manager");
 const AccountDashboardPage = require("./AccountDashboardPage");
 
 class AccountLoginPage extends BasePage {
@@ -35,6 +34,7 @@ class AccountLoginPage extends BasePage {
 
   async clickLoginButton() {
     await this.clickElement(this.loginButton);
+    return new AccountDashboardPage(this.page);
   }
 
   async login(loginName, password) {

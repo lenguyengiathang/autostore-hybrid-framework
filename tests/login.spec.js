@@ -1,8 +1,10 @@
 const { test, expect } = require("../fixtures/fixtures");
+const userData = require("../data/userData.json");
+
+let dashboardPage;
 
 test.describe("Login Tests", () => {
   test.beforeEach(async ({ loginPage }) => {
-    await loginPage.refreshPage();
   });
 
   test("login with empty or invalid credentials", async ({ loginPage }) => {
@@ -11,20 +13,24 @@ test.describe("Login Tests", () => {
     await loginPage.clickLoginButton();
     await expect(loginPage.errorMessage).toContainText("Error: Incorrect login or password provided.");
     await loginPage.refreshPage();
-    await loginPage.fillLoginNameTextbox("invalidUser");
-    await loginPage.fillPasswordTextbox("invalidPassword");
+    await loginPage.fillLoginNameTextbox(userData.invalidUser.username);
+    await loginPage.fillPasswordTextbox(userData.invalidUser.password);
     await loginPage.clickLoginButton();
     await expect(loginPage.errorMessage).toContainText("Error: Incorrect login or password provided.");
   });
 
   test("login with valid credentials", async ({ loginPage }) => {
-    await loginPage.fillLoginNameTextbox("validUser");
-    await loginPage.fillPasswordTextbox("validPassword");
-    await loginPage.clickLoginButton();
-    const dashboardPage = PageGeneratorManager.getAccountDashboardPage(loginPage.page);
+    await loginPage.fillLoginNameTextbox(userData.defaultUser.username);
+    await loginPage.fillPasswordTextbox(userData.defaultUser.password);
+    dashboardPage = await loginPage.clickLoginButton();
+    await expect(dashboardPage.pageTitle).toContainText("My Account");
   });
 
-  test("retrieve password using login name and email address", async ({ loginPage }) => {
-    
+  test("logout", async ({ homePage, loginPage }) => {
+    await loginPage.fillLoginNameTextbox(userData.defaultUser.username);
+    await loginPage.fillPasswordTextbox(userData.defaultUser.password);
+    dashboardPage = await loginPage.clickLoginButton();
+    homePage = await dashboardPage.selectOptionCustomerDropdownByLabel(`Not ${userData.defaultUser.firstName}? Logoff`);
+    await expect(homePage.pageTitle).toContainText("Account Logout");
   });
 });

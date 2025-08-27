@@ -9,15 +9,14 @@ class BasePage {
     /** @type {Page} */
     this.page = page;
     this.loginOrRegisterLink = page.getByRole("link", { name: "Login or register" });
+    this.pageTitle = page.locator("h1");
+    this.customerDropdown = page.locator("#customernav");
     this.errorMessage = page.locator(".alert-error");
+    this.product = page.locator(".prdocutname");
   }
 
   async navigateToUrl(url, locator) {
     await this.page.goto(url);
-  }
-
-  async getPageTitle() {
-    return await this.page.title();
   }
 
   async refreshPage() {
@@ -25,9 +24,7 @@ class BasePage {
   }
 
   async setcookie(name, value) {
-    await this.page
-      .context()
-      .addCookies([{ name, value, url: this.page.url() }]);
+    await this.page.context().addCookies([{ name, value, url: this.page.url() }]);
   }
 
   async getCookie(name) {
@@ -81,11 +78,16 @@ class BasePage {
   }
 
   async hover(locator) {
-    await locator.hover();
+    await locator.hover({ force: true });
   }
 
-  async selectOptionDropdown(locator, value) {
+  async selectOptionDefaultDropdown(locator, value) {
     await locator.selectOption(value);
+  }
+
+  async selectOptionCustomDropdown(locator, optionLabel) {
+    await this.clickElement(locator);
+    await this.page.locator(`text=${optionLabel}`).click();
   }
 
   async switchToTab(index) {
@@ -113,6 +115,8 @@ class BasePage {
     return await locator.count();
   }
 
+  // Specific to this project
+
   async clickLoginOrRegisterLink() {
     await this.clickElement(this.loginOrRegisterLink);
   }
@@ -120,6 +124,8 @@ class BasePage {
   async getErrorMessage() {
     return this.errorMessage;
   }
+
+  
 }
 
 module.exports = BasePage;

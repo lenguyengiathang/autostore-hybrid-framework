@@ -4,7 +4,7 @@
     "rootDir": "/Users/thangle/autostore-hybrid-framework/tests",
     "forbidOnly": false,
     "fullyParallel": true,
-    "globalSetup": "/Users/thangle/autostore-hybrid-framework/fixtures/global-setup.js",
+    "globalSetup": null,
     "globalTeardown": null,
     "globalTimeout": 0,
     "grep": {},
@@ -103,156 +103,186 @@
   },
   "suites": [
     {
-      "title": "login.spec.js",
-      "file": "login.spec.js",
+      "title": "search.spec.js",
+      "file": "search.spec.js",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "login with empty or invalid credentials",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "Search Tests",
+          "file": "search.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Chromium",
-              "projectName": "Chromium",
-              "results": [
+              "title": "search a product by all categories",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 13306,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-18T15:28:49.784Z",
+                  "timeout": 30000,
                   "annotations": [],
-                  "attachments": [
+                  "expectedStatus": "passed",
+                  "projectId": "Chromium",
+                  "projectName": "Chromium",
+                  "results": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/thangle/autostore-hybrid-framework/test-results/login-login-with-empty-or-invalid-credentials-Chromium/test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/Users/thangle/autostore-hybrid-framework/test-results/login-login-with-empty-or-invalid-credentials-Chromium/trace.zip"
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7904,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-25T15:50:35.722Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/thangle/autostore-hybrid-framework/test-results/search-Search-Tests-search-a-product-by-all-categories-Chromium/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/thangle/autostore-hybrid-framework/test-results/search-Search-Tests-search-a-product-by-all-categories-Chromium/trace.zip"
+                        }
+                      ]
                     }
-                  ]
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "badc1754af1944f68b2b-f827c79bf44a657adebe",
-          "file": "login.spec.js",
-          "line": 3,
-          "column": 1
-        },
-        {
-          "title": "login with empty or invalid credentials",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "9e6ea2b6d72fedbaa223-07ddf4777f00ce2783d1",
+              "file": "search.spec.js",
+              "line": 11,
+              "column": 8
+            },
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Firefox",
-              "projectName": "Firefox",
-              "results": [
+              "title": "search a product by all categories",
+              "ok": false,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 15985,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-18T15:28:49.783Z",
+                  "timeout": 30000,
                   "annotations": [],
-                  "attachments": [
+                  "expectedStatus": "passed",
+                  "projectId": "Firefox",
+                  "projectName": "Firefox",
+                  "results": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/thangle/autostore-hybrid-framework/test-results/login-login-with-empty-or-invalid-credentials-Firefox/test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/Users/thangle/autostore-hybrid-framework/test-results/login-login-with-empty-or-invalid-credentials-Firefox/trace.zip"
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 31374,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/thangle/autostore-hybrid-framework/pages/SearchResultsPage.js",
+                            "column": 56,
+                            "line": 37
+                          },
+                          "message": "Error: locator.waitFor: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1').filter({ hasText: 'Search' }) to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/SearchResultsPage.js:37\n\n\u001b[0m \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m   \u001b[36masync\u001b[39m areProductsDisplayedCorrectly(searchValue) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpageTitle\u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m \u001b[32m\"Search\"\u001b[39m })\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m\"visible\"\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m     \u001b[36mconst\u001b[39m count \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mproduct\u001b[33m.\u001b[39mcount()\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m\n \u001b[90m 40 |\u001b[39m     \u001b[36mif\u001b[39m (count \u001b[33m===\u001b[39m \u001b[35m0\u001b[39m) {\u001b[0m\n\u001b[2m    at SearchResultsPage.areProductsDisplayedCorrectly (/Users/thangle/autostore-hybrid-framework/pages/SearchResultsPage.js:37:56)\u001b[22m\n\u001b[2m    at /Users/thangle/autostore-hybrid-framework/tests/search.spec.js:13:47\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-25T15:50:35.725Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/thangle/autostore-hybrid-framework/test-results/search-Search-Tests-search-a-product-by-all-categories-Firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/thangle/autostore-hybrid-framework/test-results/search-Search-Tests-search-a-product-by-all-categories-Firefox/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/thangle/autostore-hybrid-framework/test-results/search-Search-Tests-search-a-product-by-all-categories-Firefox/trace.zip"
+                        }
+                      ]
                     }
-                  ]
+                  ],
+                  "status": "unexpected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "badc1754af1944f68b2b-f0d5c32bdf243e26ae04",
-          "file": "login.spec.js",
-          "line": 3,
-          "column": 1
-        },
-        {
-          "title": "login with empty or invalid credentials",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "9e6ea2b6d72fedbaa223-54afed00d0d34aa1eaf7",
+              "file": "search.spec.js",
+              "line": 11,
+              "column": 8
+            },
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "WebKit",
-              "projectName": "WebKit",
-              "results": [
+              "title": "search a product by all categories",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 2,
-                  "parallelIndex": 2,
-                  "status": "passed",
-                  "duration": 10167,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-18T15:28:49.782Z",
+                  "timeout": 30000,
                   "annotations": [],
-                  "attachments": [
+                  "expectedStatus": "passed",
+                  "projectId": "WebKit",
+                  "projectName": "WebKit",
+                  "results": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/thangle/autostore-hybrid-framework/test-results/login-login-with-empty-or-invalid-credentials-WebKit/test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/Users/thangle/autostore-hybrid-framework/test-results/login-login-with-empty-or-invalid-credentials-WebKit/trace.zip"
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 11293,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-25T15:50:35.720Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/thangle/autostore-hybrid-framework/test-results/search-Search-Tests-search-a-product-by-all-categories-WebKit/test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/thangle/autostore-hybrid-framework/test-results/search-Search-Tests-search-a-product-by-all-categories-WebKit/trace.zip"
+                        }
+                      ]
                     }
-                  ]
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
+              "id": "9e6ea2b6d72fedbaa223-303bfb3e9def6e38a8dc",
+              "file": "search.spec.js",
+              "line": 11,
+              "column": 8
             }
-          ],
-          "id": "badc1754af1944f68b2b-fe901e85f62ca35babd9",
-          "file": "login.spec.js",
-          "line": 3,
-          "column": 1
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-08-18T15:28:44.553Z",
-    "duration": 22208.623,
-    "expected": 3,
+    "startTime": "2025-08-25T15:50:35.479Z",
+    "duration": 32884.829000000005,
+    "expected": 2,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

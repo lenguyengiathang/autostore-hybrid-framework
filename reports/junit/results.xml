@@ -1,33 +1,72 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="22.208623">
-<testsuite name="login.spec.js" timestamp="2025-08-18T15:28:49.547Z" hostname="Chromium" tests="1" failures="0" skipped="0" time="13.306" errors="0">
-<testcase name="login with empty or invalid credentials" classname="login.spec.js" time="13.306">
+<testsuites id="" name="" tests="3" failures="1" skipped="0" errors="0" time="32.884829">
+<testsuite name="search.spec.js" timestamp="2025-08-25T15:50:35.487Z" hostname="Chromium" tests="1" failures="0" skipped="0" time="7.904" errors="0">
+<testcase name="Search Tests › search a product by all categories" classname="search.spec.js" time="7.904">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|../../test-results/login-login-with-empty-or-invalid-credentials-Chromium/test-finished-1.png]]
+[[ATTACHMENT|../../test-results/search-Search-Tests-search-a-product-by-all-categories-Chromium/test-finished-1.png]]
 
-[[ATTACHMENT|../../test-results/login-login-with-empty-or-invalid-credentials-Chromium/trace.zip]]
+[[ATTACHMENT|../../test-results/search-Search-Tests-search-a-product-by-all-categories-Chromium/trace.zip]]
 ]]>
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="login.spec.js" timestamp="2025-08-18T15:28:49.547Z" hostname="Firefox" tests="1" failures="0" skipped="0" time="15.985" errors="0">
-<testcase name="login with empty or invalid credentials" classname="login.spec.js" time="15.985">
+<testsuite name="search.spec.js" timestamp="2025-08-25T15:50:35.487Z" hostname="Firefox" tests="1" failures="1" skipped="0" time="31.374" errors="0">
+<testcase name="Search Tests › search a product by all categories" classname="search.spec.js" time="31.374">
+<failure message="search.spec.js:11:8 search a product by all categories" type="FAILURE">
+<![CDATA[  [Firefox] › search.spec.js:11:8 › Search Tests › search a product by all categories ──────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.waitFor: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('h1').filter({ hasText: 'Search' }) to be visible
+
+
+       at ../pages/SearchResultsPage.js:37
+
+      35 |
+      36 |   async areProductsDisplayedCorrectly(searchValue) {
+    > 37 |     await this.pageTitle.filter({ hasText: "Search" }).waitFor({ state: "visible" });
+         |                                                        ^
+      38 |     const count = await this.product.count();
+      39 |
+      40 |     if (count === 0) {
+        at SearchResultsPage.areProductsDisplayedCorrectly (/Users/thangle/autostore-hybrid-framework/pages/SearchResultsPage.js:37:56)
+        at /Users/thangle/autostore-hybrid-framework/tests/search.spec.js:13:47
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/search-Search-Tests-search-a-product-by-all-categories-Firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/search-Search-Tests-search-a-product-by-all-categories-Firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../test-results/search-Search-Tests-search-a-product-by-all-categories-Firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace ../test-results/search-Search-Tests-search-a-product-by-all-categories-Firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
 <system-out>
 <![CDATA[
-[[ATTACHMENT|../../test-results/login-login-with-empty-or-invalid-credentials-Firefox/test-finished-1.png]]
+[[ATTACHMENT|../../test-results/search-Search-Tests-search-a-product-by-all-categories-Firefox/test-failed-1.png]]
 
-[[ATTACHMENT|../../test-results/login-login-with-empty-or-invalid-credentials-Firefox/trace.zip]]
+[[ATTACHMENT|../../test-results/search-Search-Tests-search-a-product-by-all-categories-Firefox/error-context.md]]
+
+[[ATTACHMENT|../../test-results/search-Search-Tests-search-a-product-by-all-categories-Firefox/trace.zip]]
 ]]>
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="login.spec.js" timestamp="2025-08-18T15:28:49.547Z" hostname="WebKit" tests="1" failures="0" skipped="0" time="10.167" errors="0">
-<testcase name="login with empty or invalid credentials" classname="login.spec.js" time="10.167">
+<testsuite name="search.spec.js" timestamp="2025-08-25T15:50:35.487Z" hostname="WebKit" tests="1" failures="0" skipped="0" time="11.293" errors="0">
+<testcase name="Search Tests › search a product by all categories" classname="search.spec.js" time="11.293">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|../../test-results/login-login-with-empty-or-invalid-credentials-WebKit/test-finished-1.png]]
+[[ATTACHMENT|../../test-results/search-Search-Tests-search-a-product-by-all-categories-WebKit/test-finished-1.png]]
 
-[[ATTACHMENT|../../test-results/login-login-with-empty-or-invalid-credentials-WebKit/trace.zip]]
+[[ATTACHMENT|../../test-results/search-Search-Tests-search-a-product-by-all-categories-WebKit/trace.zip]]
 ]]>
 </system-out>
 </testcase>

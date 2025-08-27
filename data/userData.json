@@ -1,0 +1,14 @@
+{
+  "defaultUser": {
+    "firstName": "Thang",
+    "lastName": "Le",
+    "username": "thangle",
+    "password": "Thang12345"
+  },
+  "invalidUser": {
+    "firstName": "Invalid",
+    "lastName": "User",
+    "username": "invaliduser",
+    "password": "Invalid12345"
+  }
+}

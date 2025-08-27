@@ -1,0 +1,290 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - navigation:
+    - link "Automation Test Store":
+      - /url: https://automationteststore.com/
+      - img "Automation Test Store"
+    - list:
+      - listitem:
+        - link "Login or register":
+          - /url: https://automationteststore.com/index.php?rt=account/login
+    - text: Main Menu
+    - list:
+      - listitem:
+        - link " Specials":
+          - /url: https://automationteststore.com/index.php?rt=product/special
+      - listitem:
+        - link " Account":
+          - /url: https://automationteststore.com/index.php?rt=account/account
+      - listitem:
+        - link " Cart":
+          - /url: https://automationteststore.com/index.php?rt=checkout/cart
+      - listitem:
+        - link " Checkout":
+          - /url: https://automationteststore.com/index.php?rt=checkout/shipping
+    - textbox "Search Keywords": cream
+    - text: 
+  - list:
+    - listitem: $ US Dollar
+  - list:
+    - listitem:
+      - link " 0 Items - $0.00":
+        - /url: https://automationteststore.com/index.php?rt=checkout/cart
+  - link "Facebook":
+    - /url: http://www.facebook.com
+  - link "Twitter":
+    - /url: https://twitter.com/
+  - link "Linkedin":
+    - /url: https://uk.linkedin.com/
+- navigation:
+  - list:
+    - listitem:
+      - link "Home":
+        - /url: https://automationteststore.com/
+    - listitem:
+      - link "Apparel & accessories":
+        - /url: https://automationteststore.com/index.php?rt=product/category&path=68
+    - listitem:
+      - link "Makeup":
+        - /url: https://automationteststore.com/index.php?rt=product/category&path=36
+    - listitem:
+      - link "Skincare":
+        - /url: https://automationteststore.com/index.php?rt=product/category&path=43
+    - listitem:
+      - link "Fragrance":
+        - /url: https://automationteststore.com/index.php?rt=product/category&path=49
+    - listitem:
+      - link "Men":
+        - /url: https://automationteststore.com/index.php?rt=product/category&path=58
+    - listitem:
+      - link "Hair Care":
+        - /url: https://automationteststore.com/index.php?rt=product/category&path=52
+    - listitem:
+      - link "Books":
+        - /url: https://automationteststore.com/index.php?rt=product/category&path=65
+- paragraph: Learn Automation Testing the right way Realistic Online Store!
+- text: 
+- heading "Fast shipping" [level=2]
+- text: For every order placed! 
+- heading "Easy Payments" [level=2]
+- text: Check out as guest! 
+- heading "Shipping Options" [level=2]
+- text: Get items faster! 
+- heading "Large Variety" [level=2]
+- text: Many different products available
+- heading "Welcome to the Automation Test Store! This is not a real store. No orders are actually placed or any payments taken. It is recommended you use test data when practicing using this site. This site is to be used for educational purposes only. Enjoy!" [level=4]
+- heading "FeaturedSee Our Most featured Products" [level=1]
+- link "Skinsheen Bronzer Stick":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=50
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=50
+- link "":
+  - /url: "#"
+- text: $29.50
+- link "BeneFit Girl Meets Pearl":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=51
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=51
+- text: Out of Stock $19.00 $30.00
+- link "Benefit Bella Bamba":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=52
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=52
+- link "":
+  - /url: "#"
+- text: $28.00
+- link "Tropiques Minerale Loose Bronzer":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=53
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=53
+- link "":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=53
+- text: $38.50
+- heading "Latest ProductsSee New Products" [level=1]
+- link "Absolute Anti-Age Spot Replenishing Unifying TreatmentSPF 15":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=68
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=68
+- link "":
+  - /url: "#"
+- text: $42.00
+- link "Absolue Eye Precious Cells":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=65
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=65
+- link "":
+  - /url: "#"
+- text: $89.00 $105.00
+- link "Total Moisture Facial Cream":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=66
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=66
+- text: Out of Stock $38.00
+- link "Flash Bronzer Body Gel":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=67
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=67
+- link "":
+  - /url: "#"
+- text: $29.00 $34.50
+- heading "BestsellersSee Best Selling Products" [level=1]
+- link "Skinsheen Bronzer Stick":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=50
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=50
+- link "":
+  - /url: "#"
+- text: $29.50
+- link "New Ladies High Wedge Heel Toe Thong Diamante Flip Flop Sandals":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=116
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=116
+- link "":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=116
+- text: $26.00
+- link "Tropiques Minerale Loose Bronzer":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=53
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=53
+- link "":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=53
+- text: $38.50
+- link "Absolue Eye Precious Cells":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=65
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=65
+- link "":
+  - /url: "#"
+- text: $89.00 $105.00
+- heading "SpecialsSee Products On Sale" [level=1]
+- link "Absolue Eye Precious Cells":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=65
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=65
+- link "":
+  - /url: "#"
+- text: $89.00 $105.00
+- link "Acqua Di Gio Pour Homme":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=80
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=80
+- link "":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=80
+- text: $45.00 $59.00
+- link "BeneFit Girl Meets Pearl":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=51
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=51
+- text: Out of Stock $19.00 $30.00
+- link "Brunette expressions Conditioner":
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=72
+- link:
+  - /url: https://automationteststore.com/index.php?rt=product/product&product_id=72
+- text: Out of Stock $24.00 $27.00
+- heading "Brands Scrolling List" [level=1]
+- list:
+  - listitem:
+    - link "Benefit":
+      - /url: https://automationteststore.com/index.php?rt=product/manufacturer&manufacturer_id=12
+      - img "Benefit"
+  - listitem:
+    - link "Pantene":
+      - /url: https://automationteststore.com/index.php?rt=product/manufacturer&manufacturer_id=17
+      - img "Pantene"
+  - listitem:
+    - link "M·A·C":
+      - /url: https://automationteststore.com/index.php?rt=product/manufacturer&manufacturer_id=11
+      - img "M·A·C"
+  - listitem:
+    - link "Lancôme":
+      - /url: https://automationteststore.com/index.php?rt=product/manufacturer&manufacturer_id=15
+      - img "Lancôme"
+  - listitem:
+    - link "Gucci":
+      - /url: https://automationteststore.com/index.php?rt=product/manufacturer&manufacturer_id=20
+      - img "Gucci"
+  - listitem:
+    - link "Giorgio Armani":
+      - /url: https://automationteststore.com/index.php?rt=product/manufacturer&manufacturer_id=19
+      - img "Giorgio Armani"
+  - listitem:
+    - link "Dove":
+      - /url: https://automationteststore.com/index.php?rt=product/manufacturer&manufacturer_id=18
+      - img "Dove"
+  - listitem:
+    - link "Calvin Klein":
+      - /url: https://automationteststore.com/index.php?rt=product/manufacturer&manufacturer_id=13
+      - img "Calvin Klein"
+  - listitem:
+    - link "Bvlgari":
+      - /url: https://automationteststore.com/index.php?rt=product/manufacturer&manufacturer_id=14
+      - img "Bvlgari"
+  - listitem:
+    - link "Sephora":
+      - /url: https://automationteststore.com/index.php?rt=product/manufacturer&manufacturer_id=16
+      - img "Sephora"
+- contentinfo:
+  - heading "About Us" [level=2]
+  - paragraph: This store has been created to enable students to practice their automation testing skills. This is not a real store, no orders are actually placed or payments taken. This store is to be used for educational purposes only.
+  - heading "Contact Us" [level=2]
+  - list:
+    - listitem:  +123 456 7890
+    - listitem:  admin@automationteststore.com
+  - heading "Testimonials" [level=2]
+  - list:
+    - listitem: "\"Regular customer and products at great prices. Thanks again.\" By : Mrs Baker on trustedmegareviews.org"
+    - listitem: "\"Really great products and professional service!\" By : Megan Witmore"
+    - listitem: "\"I found this store to be very reasonably priced and the service was superb. Highly recommended \" By : Jason Sturidge"
+    - listitem: "\"Returns were easy and my replacement item arrived very quickly. Really great service. Thanks and will be buying again.\" By : Kirsty Williams"
+    - listitem: "\"Regular customer and products at great prices. Thanks again.\" By : Mrs Baker on trustedmegareviews.org"
+    - listitem: "\"Really great products and professional service!\" By : Megan Witmore"
+  - list:
+    - listitem: "1"
+    - listitem: "2"
+    - listitem: "3"
+    - listitem: "4"
+  - heading "Newsletter Signup" [level=2]
+  - text:  Sign up to Our Newsletter & get attractive Offers by subscribing to our newsletters.
+  - textbox "Subscribe to Newsletter"
+  - button "Subscribe"
+  - list:
+    - listitem:
+      - link "About Us":
+        - /url: https://automationteststore.com/index.php?rt=content/content&content_id=1
+    - listitem:
+      - link "Privacy Policy":
+        - /url: https://automationteststore.com/index.php?rt=content/content&content_id=2
+    - listitem:
+      - link "Return Policy":
+        - /url: https://automationteststore.com/index.php?rt=content/content&content_id=3
+    - listitem:
+      - link "Shipping":
+        - /url: https://automationteststore.com/index.php?rt=content/content&content_id=4
+    - listitem:
+      - link "Contact Us":
+        - /url: https://automationteststore.com/index.php?rt=content/contact
+    - listitem:
+      - link "Site Map":
+        - /url: https://automationteststore.com/index.php?rt=content/sitemap
+    - listitem:
+      - link "Login":
+        - /url: https://automationteststore.com/index.php?rt=account/login
+  - link "Facebook":
+    - /url: http://www.facebook.com
+  - link "Twitter":
+    - /url: https://twitter.com/
+  - link "Linkedin":
+    - /url: https://uk.linkedin.com/
+  - img "payments"
+  - text: Powered By
+  - link "AbanteCart":
+    - /url: http://www.abantecart.com
+  - text: Automation Test Store © 2025
+  - link "Support AbanteCart eCommerce":
+    - /url: http://www.abantecart.com/contribute-to-abantecart
+    - img "Support AbanteCart eCommerce"
+  - link "Back to top":
+    - /url: "#"
+```
